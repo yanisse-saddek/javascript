@@ -30,25 +30,35 @@ var age = 18
 var template = `I'm ${age} years old`
 console.log(template)
 
+
 // Bonus
 var changed = 'Bonjour'
 changed = changed.replaceAll('o', 'a');
 console.log(changed)
 
+
 var blabla = "J'adore les chats"
 blablaReplace = blabla.replace('chats', 'chiens')
 console.log(blablaReplace);
+
 
 var blablaLast = blabla.lastIndexOf(" ");
 blablaLast = blabla.substring(0, blablaLast);
 console.log(`${blablaLast} gato`);
 
-var perso1 = {
+
+var kuro = {
     couleur:"rouge",
-    prenom:"jean-proute",
+    prenom:"kuro",
 }
-var perso2 = ['vert', 'jean-jolin'];
-    console.log(`La couleur préférée de ${perso1.prenom} est le ${perso1.couleur}`);
-    console.log(`La couleur préféréer de ${perso2[1]} est le ${perso2[0]}`);    
+var kira = ['vert', 'kira'];
+    console.log(`La couleur préférée de ${kuro.prenom} est le ${kuro.couleur}`);
+    console.log(`La couleur préféréer de ${kira[1]} est le ${kira[0]}`);    
+
+
+var pomme = 'mon fruit préféré c\'est la pomme';
+pomme = pomme.charAt(0).toUpperCase() + pomme.slice(1) + "."
+console.log(pomme);
+
 
 
