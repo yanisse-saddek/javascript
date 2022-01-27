@@ -51,3 +51,38 @@ function compare(num1, num2){
     }
 }
 compare(090, 10)
+
+// Add Up
+function addUp(num){
+    newNum = 0;
+    for(i = num; i > 0; i--){
+        newNum = newNum + i;
+    }
+    console.log(newNum)
+}
+addUp(12)
+
+// Time
+function format(numSecond){
+    var heures = Math.floor(numSecond/3600)
+    var minutes = Math.floor((numSecond - (heures * 3600)) /60);
+    var secondes = numSecond - (heures * 3600) - (minutes * 60);
+    console.log('Hours : ', heures, ' Minutes : ', minutes, ' Seconds ', secondes)
+}
+format(3700)
+
+// Bonus
+function generatePassword(num){
+    if(num.length > 15 || num.length<6){
+        console.log('error')
+    }
+    randArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    var password = [];
+    
+    for(i = 0; i <= num.length; i++){
+    randNumber = Math.round(Math.random() * randArray.length -1 )
+     password.push(randArray[randNumber])
+    }
+    console.log(password.join(''))
+}
+generatePassword('pipiproutent')
