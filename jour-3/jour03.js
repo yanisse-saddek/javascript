@@ -86,3 +86,8 @@ for(i=0; i<= 20; i++){
 }
 console.log(array)
 
+for(i=1; i<= array.length-1; i++){
+    if(array[i] >= array.length-1){
+        console.log('L\'entier le plus grand est ', array[i] )
+    }
+}
