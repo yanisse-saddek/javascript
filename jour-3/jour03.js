@@ -73,3 +73,16 @@ while(i < limit){
 console.log(total)
 
 // Bonus 3
+var studentList = ['Yanisse', 'Omar', 'Alexandre T.', 'Alexandre C.', 'Tenzin', 'Ethan', 'Chamssoudine', 'Lies', 'Ismail', 'Joel', 'Marvin', 'Naim', 'Matéo', 'Ibrahima', 'Erfan', 'Al']
+var student = Math.round(Math.random() * (studentList.length -1))
+
+console.log(studentList[student])
+console.log(student)
+
+// Bonus 4
+var array = []
+for(i=0; i<= 20; i++){
+    array.push(i)
+}
+console.log(array)
+
