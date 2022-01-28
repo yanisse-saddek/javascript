@@ -86,3 +86,24 @@ function generatePassword(num){
     console.log(password.join(''))
 }
 generatePassword('pipiproutent')
+
+//Bonus 2
+function launchDice(numberOfDice){
+    allDiceValue = 0;
+    for(i=1; i<= numberOfDice; i++){
+        deValue = Math.ceil(Math.random() * 6);
+        allDiceValue += deValue;
+    }
+    console.log(allDiceValue);
+    return allDiceValue;
+}
+var player1 = launchDice(5)
+var player2 = launchDice(5)
+       
+if(player1 > player2){
+    console.log('Le joueur 1 a gagné')
+}else if(player2 > player1){
+    console.log('Le joueur 2 a gagné')
+}else{
+    console.log('equal')
+}
