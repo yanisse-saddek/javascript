@@ -77,7 +77,6 @@ var studentList = ['Yanisse', 'Omar', 'Alexandre T.', 'Alexandre C.', 'Tenzin', 
 var student = Math.round(Math.random() * (studentList.length -1))
 
 console.log(studentList[student])
-console.log(student)
 
 // Bonus 4
 var array = []

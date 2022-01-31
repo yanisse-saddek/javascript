@@ -25,9 +25,9 @@ var cat2 = {
 }
 var cats = [cat, cat2];
 console.log(cats[0].age)
-console.log(cat.age)
+console.log(cats[0]['age'])
 console.log(cats[1].isCute)
-console.log(cat.isCute)
+console.log(cats[1]['isCute'])
 
 // Even 
 function checkIfEven(num){
@@ -75,17 +75,18 @@ format(3700)
 function generatePassword(num){
     if(num.length > 15 || num.length<6){
         console.log('error')
+    }else{
+        randArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        var password = [];
+        
+        for(i = 0; i <= num.length; i++){
+        randNumber = Math.round(Math.random() * randArray.length -1 )
+         password.push(randArray[randNumber])
+        }
+        console.log(password.join(''))
     }
-    randArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-    var password = [];
-    
-    for(i = 0; i <= num.length; i++){
-    randNumber = Math.round(Math.random() * randArray.length -1 )
-     password.push(randArray[randNumber])
-    }
-    console.log(password.join(''))
 }
-generatePassword('pipiproutent')
+generatePassword('aaaaaaa')
 
 //Bonus 2
 function launchDice(numberOfDice){
@@ -94,7 +95,6 @@ function launchDice(numberOfDice){
         deValue = Math.ceil(Math.random() * 6);
         allDiceValue += deValue;
     }
-    console.log(allDiceValue);
     return allDiceValue;
 }
 var player1 = launchDice(5)
