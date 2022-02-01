@@ -81,7 +81,8 @@ console.log(studentList[student])
 // Bonus 4
 var array = []
 for(i=0; i<= 20; i++){
-    array.push(i)
+    int = Math.ceil(Math.random() *100)
+    array.push(int)
 }
 console.log(array)
 

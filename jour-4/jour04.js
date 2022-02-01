@@ -31,13 +31,13 @@ console.log(cats[1]['isCute'])
 
 // Even 
 function checkIfEven(num){
-    if(num % 2 ){
-        console.log('Odd')
-    }else{
+    if(num % 2 === 0){
         console.log('Even')
+    }else{
+        console.log('Odd')
     }
 }
-checkIfEven(7.6)
+checkIfEven(6)
 
 // Compare
 function compare(num1, num2){
@@ -95,6 +95,7 @@ function launchDice(numberOfDice){
         deValue = Math.ceil(Math.random() * 6);
         allDiceValue += deValue;
     }
+    console.log('equal')
     return allDiceValue;
 }
 var player1 = launchDice(5)
@@ -105,5 +106,4 @@ if(player1 > player2){
 }else if(player2 > player1){
     console.log('Le joueur 2 a gagné')
 }else{
-    console.log('equal')
 }
