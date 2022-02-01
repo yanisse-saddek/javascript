@@ -69,37 +69,25 @@ function play(num){
     console.log('Quel est le nombre mystère ? ')
     if(num > mysteryNum){
        console.log("C'est moins")
-       prompt.start()
-        prompt.get('number' , function(err, result){
-            promptNumber = result.number;  
-            play(promptNumber)  
-        }); 
+       userWrite();
+
     }else if(num < mysteryNum){
         console.log("C'est plus")
-        prompt.start()
-        prompt.get('number' , function(err, result){
-            promptNumber = result.number;  
-            play(promptNumber)  
-        }); 
+        userWrite();
+
     }else if(num == mysteryNum){
-        console.log('Bravo !!!')
-        prompt.start()
-        prompt.get('number' , function(err, result){
-            promptNumber = result.number;  
-            play(promptNumber)  
-        }); 
+        console.log('Bravo ! Le nombre était ', mysteryNum)
     }else{
         console.log('error')
-        prompt.start()
-        prompt.get('number' , function(err, result){
-            promptNumber = result.number;  
-            play(promptNumber)  
-        }); 
+        userWrite();
     }
 }
 
-prompt.start()
-prompt.get('number' , function(err, result){
-    promptNumber = result.number;  
-    play(promptNumber)  
-}); 
+function userWrite(){
+    prompt.start()
+    prompt.get('number' , function(err, result){
+        promptNumber = result.number;  
+        play(promptNumber)  
+    }); 
+}
+userWrite();
