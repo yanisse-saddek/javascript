@@ -9,17 +9,17 @@ function format(textToDate){
 }
 format('2010-05-15')
 
-// // Age
-// function calculateAge(birthdate){
-//     var todayDate = new Date();
-//     todayYears = todayDate.getFullYear();
-//     age = todayYears - birthdate;
-//     console.log(age)
-// }   
-// const { match } = require('assert')
-// //calculateAge("2000")
+// Age
+function calculateAge(birthdate){
+    var todayDate = new Date();
+    todayYears = todayDate.getFullYear();
+    age = todayYears - birthdate;
+    console.log(age)
+}   
+const { match } = require('assert')
+calculateAge("2000")
 
-// // Validator 
+// Validator 
 
  var prompt = require('prompt');
 prompt.start()
