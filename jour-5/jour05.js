@@ -55,36 +55,36 @@
 // var {addition, multiply} = require('./table-utils.js')
 // console.log(addition(4))
 
-// Guess
-// var mysteryNum = Math.ceil(Math.random() * 100);
-// console.log(mysteryNum)
-// var prompt = require('prompt');
-// function play(num){
-//     console.log('Quel est le nombre mystère ? ')
-//     if(num > mysteryNum){
-//        console.log("C'est moins")
-//        userWrite();
+//Guess
+var mysteryNum = Math.ceil(Math.random() * 100);
+console.log(mysteryNum)
+var prompt = require('prompt');
+function play(num){
+    console.log('Quel est le nombre mystère ? ')
+    if(num > mysteryNum){
+       console.log("C'est moins")
+       userWrite();
 
-//     }else if(num < mysteryNum){
-//         console.log("C'est plus")
-//         userWrite();
+    }else if(num < mysteryNum){
+        console.log("C'est plus")
+        userWrite();
 
-//     }else if(num == mysteryNum){
-//         console.log('Bravo ! Le nombre était ', mysteryNum)
-//     }else{
-//         console.log('error')
-//         userWrite();
-//     }
-// }
+    }else if(num == mysteryNum){
+        console.log('Bravo ! Le nombre était ', mysteryNum)
+    }else{
+        console.log('error')
+        userWrite();
+    }
+}
 
-// function userWrite(){
-//     prompt.start()
-//     prompt.get('number' , function(err, result){
-//         promptNumber = result.number;  
-//         play(promptNumber)  
-//     }); 
-// }
-// userWrite();
+function userWrite(){
+    prompt.start()
+    prompt.get('number' , function(err, result){
+        promptNumber = result.number;  
+        play(promptNumber)  
+    }); 
+}
+userWrite();
 
 // var prompt = require('prompt');
 
