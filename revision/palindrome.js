@@ -1,6 +1,6 @@
 function checkPal(text){
     text = text.split('')
-    correct=0
+    correct=0;
 
     for(i=1; i<=text.length; i++){
         let lastElement = text[text.length - i];
@@ -11,9 +11,9 @@ function checkPal(text){
         }
     }
     if(correct===text.length){
-        console.log('palindrome')
+        console.log(text.join(''), 'est un palindrome')
     }else if(correct!== text.length){
-        console.log('nope')
+        console.log(text.join(''), 'n\'est pas un palindrome')
     }
 }   
 
