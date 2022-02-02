@@ -22,35 +22,26 @@ format('2010-05-15')
 // // Validator 
 
  var prompt = require('prompt');
-     prompt.start()
+prompt.start()
       prompt.get(['mail', 'username', 'password'] , function(err, result){
           promptMail = result.mail;  
           promptUsername = result.username;  
           promptPassword = result.password;  
-         checkProfile(promptMail, promptUsername, promptPassword)
-      }); 
+         checkProfile(promptUsername, promptPassword, promptMail)
+}); 
 
  function checkProfile(username, password, mail){
-     var usernameReg = /^@$/
-     var passwordReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+     var usernameReg = /^[A-Za-z][A-Za-z0-9_]{7,29}$/
+     var passwordReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
      var mailReg = /(.+)@(.+){2,}\.(.+){2,}/
 
      let testUsername = usernameReg.test(username)
-     let testPassword = passwordReg.test(password)
+     let testPassword = passwordReg.test(password) // Une maj min / un chiffre / Un chiffre bizarre
      let testMail = mailReg.test(mail)
-        if(testMail){
-            console.log('mail correct')
+
+        if(testMail && testUsername && testPassword){
+            console.log('All good!!!')
         }else{
-            console.log('mail faux')
-        }
-        if(testUsername){
-            console.log('username correct')
-        }else{
-            console.log('username faux')
-        }
-        if(testPassword){
-            console.log('password correct')
-        }else{
-            console.log('password faux')
+            console.log('Error')
         }
  }
