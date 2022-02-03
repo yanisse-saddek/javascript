@@ -1,6 +1,8 @@
 // // File System
 // var fs = require('fs')
 
+const { setDefaultResultOrder } = require("dns")
+
 // fs.readFile('jour07.txt', function(err, data){
 //     if(err){
 //         console.log(err)
@@ -86,6 +88,7 @@ var cakes = [
 ]
 let chocolateCake = cakes.filter(function(status){
     if(status.flavor === "chocolate"){
+        status.status = "sold out!"
         let chocolateFlavour = []
         chocolateFlavour.push(status);
         return  chocolateFlavour
