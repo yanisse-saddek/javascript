@@ -84,12 +84,24 @@ var cakes = [
 		status: "available"
 	},
 ]
-
-var chocolateCake = cakes.map(function(cake){
-    if(cake.flavor === "chocolate"){
-        cake.status = "sold out!"
+let chocolateCake = cakes.filter(function(status){
+    if(status.flavor === "chocolate"){
+        let chocolateFlavour = []
+        chocolateFlavour.push(status);
+        return  chocolateFlavour
     }
-    return cake
-
 })
-console.log(chocolateCake)
+console.log(chocolateCake);
+
+
+
+
+// // Pendu
+// var mysteryWord = "prout"
+// mysteryWord = mysteryWord.split('')
+// letter = "p"
+// for(i=0; mysteryWord.length; i++){
+//     if(mysteryWord[i] === letter){
+
+//     }
+//}
