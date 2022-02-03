@@ -2,7 +2,7 @@
 var num = 50;
 while(num <= 200){
     if(num % 2 === 0){
-console.log(num)
+        console.log(num)
     }
     num++
 }
@@ -12,7 +12,7 @@ var dice = null;
 var count = 0;
 while(dice < 6){
     lancer = Math.ceil(Math.random() * 6)
-    dice = dice + lancer;
+    dice = lancer;
     count++
 }
 console.log(count)

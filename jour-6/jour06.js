@@ -7,7 +7,7 @@ function format(textToDate){
     var day = date.getDate()
     console.log(day+'/'+ month+'/' +year)
 }
-format('2010-05-15')
+// format('2010-05-15')
 
 // Age
 function calculateAge(birthdate){
@@ -16,19 +16,18 @@ function calculateAge(birthdate){
     age = todayYears - birthdate;
     console.log(age)
 }   
-const { match } = require('assert')
-calculateAge("2000")
+//calculateAge("2000")
 
 // Validator 
 
  var prompt = require('prompt');
-prompt.start()
-      prompt.get(['mail', 'username', 'password'] , function(err, result){
-          promptMail = result.mail;  
-          promptUsername = result.username;  
-          promptPassword = result.password;  
-         checkProfile(promptUsername, promptPassword, promptMail)
-}); 
+// prompt.start()
+//       prompt.get(['mail', 'username', 'password'] , function(err, result){
+//           promptMail = result.mail;  
+//           promptUsername = result.username;  
+//           promptPassword = result.password;  
+//          checkProfile(promptUsername, promptPassword, promptMail)
+// }); 
 
  function checkProfile(username, password, mail){
      var usernameReg = /^[A-Za-z][A-Za-z0-9_]{7,29}$/
@@ -50,9 +49,11 @@ prompt.start()
 var moment = require('moment')
 
 function formatMoment(textToDate){
-    years = moment(textToDate).format('YYYY'); 
-    month = moment(textToDate).month() +1; 
-    day = moment(textToDate).date(); 
+    date = moment(textToDate)
+    
+    years = date.format('YYYY'); 
+    month = date.month() +1; 
+    day = date.date(); 
     console.log(day+'/'+month+'/'+years)
 }
 formatMoment('2010-05-15')
@@ -60,6 +61,6 @@ formatMoment('2010-05-15')
 function calculateAgeMoment(birthYear){
     var todayYear = moment().format('YYYY');
     age = todayYear - birthYear
-    console.log(age)
+    console.log("Age :", age)
 }
 calculateAgeMoment(2000)
