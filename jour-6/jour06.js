@@ -45,3 +45,21 @@ prompt.start()
             console.log('Error')
         }
  }
+
+// Bonus
+var moment = require('moment')
+
+function formatMoment(textToDate){
+    years = moment(textToDate).format('YYYY'); 
+    month = moment(textToDate).month() +1; 
+    day = moment(textToDate).date(); 
+    console.log(day+'/'+month+'/'+years)
+}
+formatMoment('2010-05-15')
+
+function calculateAgeMoment(birthYear){
+    var todayYear = moment().format('YYYY');
+    age = todayYear - birthYear
+    console.log(age)
+}
+calculateAgeMoment(2000)
