@@ -1,41 +1,41 @@
-// File System
-var fs = require('fs')
+// // File System
+// var fs = require('fs')
 
-fs.readFile('jour07.txt', function(err, data){
-    if(err){
-        console.log(err)
-        return;
-    }
-    //console.log("Contenu du fichier : " + data.toString());
-})
+// fs.readFile('jour07.txt', function(err, data){
+//     if(err){
+//         console.log(err)
+//         return;
+//     }
+// console.log("Contenu du fichier : " + data.toString());
+// })
 
-// Map Double
-var array = [1,2,3,4,5];
-var double = array.map(function(num){
-    return num*2    
-})
-console.log(double)
+// // Map Double
+// var array = [1,2,3,4,5];
+// var double = array.map(function(num){
+//     return num*2    
+// })
+// console.log(double)
 
-// Map Names
-var longNames = [
-	{
-		firstName: "Jane",
-		lastName: "Doe"
-	},
-	{
-		firstName: "John",
-		lastName: "Smith"
-	}
-]
-var shortNames = longNames.map(function(person){
-    var name = 
-        {
-            name: person.firstName +" " + person.lastName,
-        }
+// // Map Names
+// var longNames = [
+// 	{
+// 		firstName: "Jane",
+// 		lastName: "Doe"
+// 	},
+// 	{
+// 		firstName: "John",
+// 		lastName: "Smith"
+// 	}
+// ]
+// var shortNames = longNames.map(function(person){
+//     var name = 
+//         {
+//             name: person.firstName +" " + person.lastName,
+//         }
     
-    return (name)
-})
-console.log(shortNames)
+//     return (name)
+// })
+// console.log(shortNames)
 
 
 // Filter Numbers 
@@ -54,7 +54,7 @@ var even = numbers.filter(function(number){
         return number
     }
 })
-//console.log(even)
+console.log(even)
 
 // // Cakes
 var cakes = [
