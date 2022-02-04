@@ -10,6 +10,7 @@ function game() {
   hiddenWord = mysteryWordArray.map(function (letter){
     return letter;
   });
+
   for (i = 0; i < mysteryWord.length; i++) {
     hiddenWord[i] = "-";
   }
@@ -23,13 +24,13 @@ function game() {
         }
       }
     }
-
+    console.clear()
+    
     for (i = 0; i < lettre.length; i++) {
       if (!hiddenWord.includes(lettre[i])) {
         count--;
       }
     }
-    console.clear()
 
     if (hiddenWord.join("") === mysteryWord) {
       console.log("Bravo tu as réussi ! Le mot était:".green, mysteryWord);
@@ -61,6 +62,12 @@ function game() {
 game();
 
 perdu = `                                                                                                                  
+                                                                                                  
+                                                                        ddddddd                  
+                                                                        d:::::d                  
+                                                                        d:::::d                  
+                                                                        d:::::d                  
+                                                                        d:::::d                   
 ppppp   ppppppppp       eeeeeeeeeeee    rrrrr   rrrrrrrrr       ddddddddd:::::d uuuuuu    uuuuuu  
 p::::ppp:::::::::p    ee::::::::::::ee  r::::rrr:::::::::r    dd::::::::::::::d u::::u    u::::u  
 p:::::::::::::::::p  e::::::eeeee:::::eer:::::::::::::::::r  d::::::::::::::::d u::::u    u::::u  
@@ -79,13 +86,14 @@ p:::::::p
 p:::::::p                                                                                         
 p:::::::p                                                                                         
 ppppppppp                                                                                         
+                                                                                                                  
 `;
 
 bravo = `                                                                                             
-bbbbbbbb                                                                                     
-b::::::b                                                                                     
-b::::::b                                                                                     
-b::::::b                                                                                     
+ bbbbbbb                                                                                     
+ b:::::b                                                                                     
+ b:::::b                                                                                     
+ b:::::b                                                                                     
  b:::::b                                                                                     
  b:::::bbbbbbbbb    rrrrr   rrrrrrrrr   aaaaaaaaaaaaavvvvvvv           vvvvvvv ooooooooooo   
  b::::::::::::::bb  r::::rrr:::::::::r  a::::::::::::av:::::v         v:::::voo:::::::::::oo 
