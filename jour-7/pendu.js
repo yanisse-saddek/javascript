@@ -1,4 +1,5 @@
-var mysteryWord = "ok";
+
+var mysteryWord = "gateau";
 mysteryWordArray = mysteryWord.split("");
 letter = [];
 count = 10;
@@ -19,23 +20,31 @@ function game(promptLetter) {
       }
     }
   }
+  for(i=0; i<lettre.length; i++){
+    console.log(lettre[i])
+    if(hiddenWord.includes(lettre[i])){
+    }else{
+      count--
+    }
+  }
   if (hiddenWord.join("") === mysteryWord) {
-    console.log('youpi');
+    console.log('Bravo tu as réussi ! Le mot était:', mysteryWord);
   }else if(count===0){
-    console.log('perdu, le mot était:', mysteryWord)
+    console.log('Tu as perdu ! Le mot était:', mysteryWord)
 } else if(count<=10){
-    console.log('il te reste', count, 'essais')
+    console.log('Il te reste', count.toString(), 'essais!')
     console.log(hiddenWord.join(""));
     promptText();
   }
 }
 
+
 function promptText() {
   var prompt = require("prompt");
   prompt.start();
-  prompt.get("lettre", function (err, result) {
-      count--
-    lettre = result.lettre;
+  prompt.get("Lettre", function (err, result) {
+
+    lettre = result.Lettre;
     game(lettre);
   });
 }
