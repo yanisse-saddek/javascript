@@ -1,5 +1,5 @@
-
-var mysteryWord = "gateau";
+function game(){
+  var mysteryWord = "ordinateur";
 mysteryWordArray = mysteryWord.split("");
 letter = [];
 count = 10;
@@ -11,7 +11,7 @@ for (i = 0; i < mysteryWord.length; i++) {
   hiddenWord[i] = "-";
 }
 
-function game(promptLetter) {
+function check(promptLetter) {
   letter.push(lettre);
   for (i = 0; i < mysteryWord.length; i++) {
     for (j = 0; j < letter.length; j++) {
@@ -20,6 +20,7 @@ function game(promptLetter) {
       }
     }
   }
+
   for(i=0; i<lettre.length; i++){
     console.log(lettre[i])
     if(hiddenWord.includes(lettre[i])){
@@ -45,7 +46,10 @@ function promptText() {
   prompt.get("Lettre", function (err, result) {
 
     lettre = result.Lettre;
-    game(lettre);
+    check(lettre);
   });
 }
 promptText();
+}
+
+game()
