@@ -1,5 +1,6 @@
 function game() {
-
+  console.clear()
+  var colors = require('colors')
   var mysteryWord = "tablette";
   mysteryWordArray = mysteryWord.split("");
   letter = [];
@@ -29,9 +30,9 @@ function game() {
     console.clear()
 
     if (hiddenWord.join("") === mysteryWord) {
-      console.log("Bravo tu as réussi ! Le mot était:", mysteryWord);
+      console.log("Bravo tu as réussi ! Le mot était:".green, mysteryWord);
     } else if (count === 0) {
-      console.log("Tu as perdu ! Le mot était:", mysteryWord);
+      console.log("Tu as perdu ! Le mot était:".red, mysteryWord);
     } else if (count <= 10) {
       console.log("Il te reste", count.toString(), "essais!");
       promptText();
@@ -51,3 +52,4 @@ function game() {
 }
 
 game();
+

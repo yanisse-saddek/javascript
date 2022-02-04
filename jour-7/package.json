@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "colors": "^1.4.0",
     "prompt": "^1.2.1"
   }
 }
