@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "colors": "^1.4.0",
-    "prompt": "^1.2.1"
+    "prompt": "^1.2.1",
+    "random-word-fr": "^1.0.3"
   }
 }
