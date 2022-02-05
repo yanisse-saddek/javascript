@@ -1,5 +1,5 @@
 function game() {
-  var tentatives = 6;
+ var tentatives = 6;
   var colors = require("colors");
   var mysteryWord = "pizza";
   var mysteryWordArray = mysteryWord.split("");
@@ -38,7 +38,7 @@ function game() {
       console.clear()
       for (i = 0; i < showWordTentative.length; i++) {
         console.log("\n");
-        console.log(i, ")", showWordTentative[i]);
+        console.log(i+1, ")", showWordTentative[i]);
         console.log("---");
       }
         console.log(
