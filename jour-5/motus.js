@@ -22,30 +22,26 @@ function game() {
         newText[i] = text[i].yellow;
       }
     }
+    showWordTentative.push(newText.join(""));
+
     if (text == mysteryWord) {
       console.log("Bravo tu as gagné !!!!!  Le mot était :".green, mysteryWord);
-    } else {
-      if (tentatives === 0) {
+    } else if (tentatives === 0 ||text.length < mysteryWord.length || text.length > mysteryWord.length) {
         console.log("Perdu, le mot était :".red, mysteryWord);
-      } else if (
-        text.length < mysteryWord.length ||
-        text.length > mysteryWord.length
-      ) {
-        console.log("perdu t naz");
       } else if (tentatives > 0) {
-        getText();
-      }
-      showWordTentative.push(newText.join(""));
+        console.log("loupé!")
+      getText();
+        }
+    }
 
+  function getText() {
+      console.clear()
       for (i = 0; i < showWordTentative.length; i++) {
         console.log("\n");
         console.log(i, ")", showWordTentative[i]);
         console.log("---");
       }
-    }
-  }
-  function getText() {
-    console.log(
+        console.log(
       "Le mot commence par",
       firstLetter,
       "et contient",
