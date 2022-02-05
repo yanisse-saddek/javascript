@@ -23,10 +23,10 @@ function game() {
       }
     }
     if (text == mysteryWord) {
-      console.log("Bravo tu as gagné !!!!!  Le mot était :", mysteryWord);
+      console.log("Bravo tu as gagné !!!!!  Le mot était :".green, mysteryWord);
     } else {
       if (tentatives === 0) {
-        console.log("Perdu, le mot était :", mysteryWord);
+        console.log("Perdu, le mot était :".red, mysteryWord);
       } else if (
         text.length < mysteryWord.length ||
         text.length > mysteryWord.length
