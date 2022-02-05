@@ -77,38 +77,11 @@ function play(num){
     }
 }
 
-// function userWrite(){
-//     prompt.start()
-//     prompt.get('number' , function(err, result){
-//         promptNumber = result.number;  
-//         play(promptNumber)  
-//     }); 
-// }
-// userWrite();
-
-var prompt = require('prompt');
-
-var tentative = 0;
-var mysteryWord = "pizza"
-var textWrote = "pilou"
-var correctLetter = [];
-
-
-function game(){
-    console.log('La premiere lettre du mot caché est', mysteryWord[0])
-    prompt.start();
-    prompt.get('textWrote', function(err, result){
-        textWrote = result.textWrote
-    });
-    for(var i = 0; i<mysteryWord.length; i++){
-
-        console.log(mysteryWord[i])
-        for(var j = 0; j<textWrote.length; j++){
-            if(mysteryWord[i] === textWrote[j])
-            correctLetter.push(textWrote[j])
-        }
-    }
-    console.log(correctLetter)
+function userWrite(){
+    prompt.start()
+    prompt.get('number' , function(err, result){
+        promptNumber = result.number;  
+        play(promptNumber)  
+    }); 
 }
-
-game()
+userWrite();
