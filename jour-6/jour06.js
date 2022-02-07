@@ -21,13 +21,13 @@ function calculateAge(birthdate){
 // Validator 
 
  var prompt = require('prompt');
-// prompt.start()
-//       prompt.get(['mail', 'username', 'password'] , function(err, result){
-//           promptMail = result.mail;  
-//           promptUsername = result.username;  
-//           promptPassword = result.password;  
-//          checkProfile(promptUsername, promptPassword, promptMail)
-// }); 
+ prompt.start()
+      prompt.get(['mail', 'username', 'password'] , function(err, result){
+          promptMail = result.mail;  
+          promptUsername = result.username;  
+          promptPassword = result.password;  
+         checkProfile(promptUsername, promptPassword, promptMail)
+}); 
 
  function checkProfile(username, password, mail){
      var usernameReg = /^[A-Za-z][A-Za-z0-9_]{7,29}$/
