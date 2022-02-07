@@ -29,18 +29,16 @@
 
 // // Pokemon
 
-// const request = require('request');
+const request = require('request');
 
-// function randomPokemon(number){
-//     var apiGet = "https://pokeapi.co/api/v2/pokemon/";
-//     var random = number;
-//     var requete = apiGet + random;
+function randomPokemon(number){
+    var apiGet = "https://pokeapi.co/api/v2/pokemon/";
 
-//         request(requete, function(err, response, body){
-//             var pokemon = JSON.parse(body)
-//             console.log(pokemon.forms[0].name)
-//         })
+        request(apiGet, function(err, response, body){
+            var pokemon = JSON.parse(body)
+            console.log(pokemon.results[number].name)
+        })
 
-// }
-// randomPokemon(5)
+}
+randomPokemon(5)
 
