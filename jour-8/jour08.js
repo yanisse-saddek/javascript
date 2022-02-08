@@ -45,7 +45,7 @@ function randomPokemon(number){
                 return;
             }
             var pokemon = JSON.parse(body)
-            console.log(pokemon.forms[0].name)
+            console.log(pokemon.name)
         })
 
 }
