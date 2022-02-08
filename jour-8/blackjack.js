@@ -28,7 +28,7 @@ function tirerCarte(choice){
         }else if(choice == "passer" && score > 16){
             console.log('Tu as passé ton tour')
             pass();
-        }else if(choice =="passer" && score<16){
+        }else if(choice =="passer" && score<=16){
             console.log('Il te faut un score de minimum 16 pour passer ton tour.')
             draw()
         }
@@ -37,8 +37,8 @@ function tirerCarte(choice){
 
     function pass(){
         loseText = 'Perdu!' + " le score de la banque était " + hiddenBank;
-        blackJack = "Blackjack!", "le score de la banque était ", hiddenBank;
-        winText = 'Bravo!', " le score de la banque était ", hiddenBank;
+        blackJack = "Blackjack!"+ "le score de la banque était " + hiddenBank;
+        winText = 'Bravo!' + " le score de la banque était " +hiddenBank;
         if(score > 21){
             console.log(loseText.red)
         }else if(score == 21){
