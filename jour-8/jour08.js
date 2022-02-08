@@ -1,11 +1,15 @@
-// // Countries
-
 const request = require('request');
+
+// // Countries
 const { json } = require('stream/consumers');
 var countriesNames = []
 var apiGet = "https://restcountries.com/v3.1/all";
 
 request(apiGet, function(err, response, body){
+    if(err){
+        console.log(err)
+        return;
+    }
     var countries = JSON.parse(body)
     for(i=0; i<countries.length; i++){
         countriesNames.push(countries[i].name.common)
@@ -16,10 +20,14 @@ request(apiGet, function(err, response, body){
 
 // Chuck Norris
 
-// const request = require('request');
-var apiGet = "https://api.chucknorris.io/jokes/random";
 function getFact(){
+    var apiGet = "https://api.chucknorris.io/jokes/random";
     request(apiGet, function(err, response, body){
+        if(err){
+            console.log(err)
+            return;
+        }
+
         var joke = JSON.parse(body)
         console.log(joke.value)
     
@@ -29,12 +37,13 @@ function getFact(){
 
 // // Pokemon
 
-// const request = require('request');
-
 function randomPokemon(number){
     var apiGet = "https://pokeapi.co/api/v2/pokemon/";
-
         request(apiGet, function(err, response, body){
+            if(err){
+                console.log(err)
+                return;
+            }
             var pokemon = JSON.parse(body)
             console.log(pokemon.results[number].name)
         })
