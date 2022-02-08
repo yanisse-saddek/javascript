@@ -38,16 +38,16 @@ function getFact(){
 // // Pokemon
 
 function randomPokemon(number){
-    var apiGet = "https://pokeapi.co/api/v2/pokemon/";
+    var apiGet = "https://pokeapi.co/api/v2/pokemon/" + number;
         request(apiGet, function(err, response, body){
             if(err){
                 console.log(err)
                 return;
             }
             var pokemon = JSON.parse(body)
-            console.log(pokemon.results[number].name)
+            console.log(pokemon.forms[0].name)
         })
 
 }
-// randomPokemon(5)
+randomPokemon(25)
 
